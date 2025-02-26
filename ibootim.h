@@ -30,6 +30,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <errno.h>
+#ifndef EFTYPE
+#include <asm-generic/errno.h>
+#define EFTYPE EMEDIUMTYPE
+#endif
 
 typedef struct ibootim ibootim;
 
